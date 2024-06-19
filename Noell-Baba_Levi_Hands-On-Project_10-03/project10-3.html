@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+   Levi Noell-Baba, October 29, 2023, IST239-W01, Hands-on project 10-03
+   
+   In Hands-on exercise 10-03 the book is teaching us to use a Google cloud account with an API key allow location services to be used on a webpage. 
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 10-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="project10-3.js" defer></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhqomZLqOb0Ttg2YFs2RYiCIU5Fv3aI0Y&callback=showMap" defer></script> <!-- script element added that refers to my google maps API key -->
+ 
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 10-3
+      </h1>
+   </header>
+
+   <section>
+      <h1>Boulder Cycling Routes</h1>
+      <p>Choose an origin and a destination of your cycling outing</p>
+      
+      <fieldset>
+         <select id="startingPoint" size="7">
+            <option value="" selected>Starting Point</option>
+            <option value="Folsom Field, Boulder CO">Folsom Field</option>
+            <option value="NCAR Mesa Laboratory, Boulder CO">NCAR</option>
+            <option value="Eben G. Fine Park, Boulder CO">Eben G. Fine Park</option>
+            <option value="Eldorado Springs, CO">Eldorado Springs</option>
+            <option value="Valmont Bike Park, Boulder CO">Valmont Bike Park</option>
+            <option value="Kossler Lake, Boulder CO">Kossler Lake</option>
+            <option value="Rocky Flats Wildlife Refuge, Boulder CO">Rocky Flats</option>  
+            <option value="Foothills Community Park, Boulder CO">Foothills Park</option>
+            <option value="Jamestown, CO">Jamestown</option>
+         </select>
+         
+         <select id="endingPoint" size="7">
+            <option value="" selected>Ending Point</option>
+            <option value="Folsom Field, Boulder CO">Folsom Field</option>
+            <option value="NCAR Mesa Laboratory, Boulder CO">NCAR</option>
+            <option value="Eben G. Fine Park, Boulder CO">Eben G. Fine Park</option>
+            <option value="Eldorado Springs, CO">Eldorado Springs</option>
+            <option value="Valmont Bike Park, Boulder CO">Valmont Bike Park</option>
+            <option value="Kossler Lake, Boulder CO">Kossler Lake</option>
+            <option value="Rocky Flats Wildlife Refuge, Boulder CO">Rocky Flats</option>
+            <option value="Foothills Community Park, Boulder CO">Foothills Park</option>   
+            <option value="Jamestown, CO">Jamestown</option>
+         </select>
+      </fieldset>
+      
+      <div id="bikeMap"></div>
+      <div id="bikeDirections"></div>
+      
+   </section>
+</body>
+</html>
